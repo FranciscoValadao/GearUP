@@ -24,7 +24,7 @@ Este é um sistema para gerenciamento de itens para trilhas, travessias, viagens
        sudo docker build -t gearup .
 3. Construa o container:
 
-       sudo docker run --name profbiointegration --env=PYTHON_VERSION=3.11 --env=PYTHON_PIP_VERSION=23.2.1 --workdir=/app -p 8080/8501 --runtime=runc -d gearup:latest
+       sudo docker run --name gearup --env=PYTHON_VERSION=3.11 --env=PYTHON_PIP_VERSION=23.2.1 --workdir=/app -p 8080/8501 --runtime=runc -d gearup:latest
 4. Obtenha o a URL utilizando o comando
 
        sudo docker container logs <containerhash>
@@ -47,16 +47,6 @@ Este é um sistema para gerenciamento de itens para trilhas, travessias, viagens
 
        pip install -r requirements.txt
 
-5. Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente:
-
-       OJS=<URL do OJS>
-       OJS_user=<Usuário de administração do OJS>
-       OJS_pass=<Senha do OJS>
-       OJS_key=<Chave de API do OJS>
-       DSPACE=<URL do DSpace>
-       DSPACE_user=<Usuário de administração do DSpace>
-       DSPACE_pass=<Senha do DSpace>
-   - Nota: As credenciais do DSpace deve ter seus caracteres especiais em notação ASCII. Ex.: 123+abc => 123%2Babc
 
 ## Uso
 Inicializando a Aplicação:
